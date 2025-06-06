@@ -1,6 +1,7 @@
 "use client";
 import { assets } from "@/assets/assets";
 import Sidebar from "@/components/layouts/Sidebar";
+import Message from "@/components/Message";
 import PromptBox from "@/components/PromptBox";
 import Image from "next/image";
 import { useState } from "react";
@@ -43,7 +44,9 @@ export default function Home() {
               <p className="text-sm mt-2">How can i help you today?</p>
             </>
           ) : (
-            <div></div>
+            <div>
+              <Message role={"user"} content={"What is NextJS"} />
+            </div>
           )}
           {/* Prompt box */}
           <PromptBox isLoading={isLoading} setIsLoading={setIsLoading} />

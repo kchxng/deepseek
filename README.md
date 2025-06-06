@@ -39,8 +39,14 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 - Clerk URL ref. [here](https://clerk.com)
 
+
 ### Dependency
 
 ```bash
 yarn add @clerk/nextjs
+yarn add axios
+#
+yarn add mongoose openai svix prismjs react-hot-toast react-markdown 
 ```
+
+###
