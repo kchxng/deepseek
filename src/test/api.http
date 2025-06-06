@@ -1,0 +1,5 @@
+@baseURL=http://localhost:3001
+
+###
+POST {{baseURL}}/api/clerk
+Content-Type: application/json

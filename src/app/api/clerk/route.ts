@@ -27,8 +27,8 @@ export async function POST(req: NextRequest) {
 
   const { data, type } = event;
 
-  //   const body = JSON.stringify(payload);
-  //   const { data, type }: any = wh.verify(body, svixHeaders as any);
+  const body = JSON.stringify(payload);
+  // const { data, type }: any = wh.verify(body, svixHeaders as any);
   // Prepare the user data to saved in db
   const userData = {
     _id: data.id,
@@ -36,6 +36,13 @@ export async function POST(req: NextRequest) {
     name: `${data.first_name} ${data.last_name}`,
     image: data.image_url,
   };
+
+  //  const userData = {
+  //   _id: '1234214nkbkb',
+  //   email: 'cheng@gmail.com',
+  //   name: `cheng xiong`,
+  //   image: '',
+  // };
 
   await connectDB();
 
