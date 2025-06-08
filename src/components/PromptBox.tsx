@@ -1,4 +1,5 @@
 import { assets } from "@/assets/assets";
+// import { useAppContext } from "@/hook/context/AppContext";
 import Image from "next/image";
 import React, { useState } from "react";
 
@@ -9,6 +10,7 @@ type Props = {
 
 const PromptBox = ({ isLoading, setIsLoading }: Props) => {
   const [prompt, setPrompt] = useState("");
+  // const { user, chats, setChats } = useAppContext();
   console.log(isLoading + " " + setIsLoading);
   return (
     <form

@@ -10,6 +10,7 @@ import {
   // UserButton,
 } from "@clerk/nextjs";
 import { AppContextProvider } from "@/hook/context/AppContext";
+import { Toaster } from "react-hot-toast";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -40,6 +41,12 @@ export default function RootLayout({
       <AppContextProvider>
         <html lang="en">
           <body className={`${getInter.className} antialiased`}>
+            <Toaster
+              toastOptions={{
+                success: { style: { background: "black", color: "white" } },
+                error: { style: { background: "black", color: "white" } },
+              }}
+            />
             {children}
           </body>
         </html>
